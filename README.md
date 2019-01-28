@@ -10,6 +10,10 @@ npm install
 npm run serve
 ```
 
+&darr;
+
+![](img/screenshot.png)
+
 ### Compiles and minifies for production
 ```
 npm run build
