@@ -1,5 +1,7 @@
 # vue-rx-example
 
+Continuation of the https://github.com/d-led/reactiveexamples repo in the browser
+
 ## Project setup
 ```
 npm install

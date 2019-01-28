@@ -13,10 +13,13 @@
 </template>
 
 <script>
-import Rx from 'rxjs/Rx';
-import { Observable } from 'rxjs'
+import Vue from 'vue'
+import VueRx from 'vue-rx'
+import Rx from 'rxjs/Rx'
 import moment from 'moment'
-
+import BootstrapVue from 'bootstrap-vue'
+import { Observable } from 'rxjs'
+Vue.use(BootstrapVue, VueRx, Rx);
 
 export default {
   name: "HelloWorld",
@@ -34,6 +37,8 @@ export default {
         const s = val.trim();
         return s=='' ? 0 : s.split(/\s+/).length;
       });
+
+    this.countWords = countWords;
 
     const ticker = Observable
       .interval(1000 /* ms */)
