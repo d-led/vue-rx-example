@@ -26,25 +26,31 @@ Vue.use(BootstrapVue, VueRx, Rx);
 export default {
   name: "HelloWorld",
   data() {
+    // input field is bound to this
     return {
       text: ""
     };
   },
+
+  // rx-vue part
   subscriptions: function() {
+    // watch the input data as an observable stream
     const countWords = this.$watchAsObservable("text")
+      // update only if not typing for 1/2 s
       .debounceTime(500)
       .pluck("newValue")
       .startWith("")
+      // count the words
       .map(val => {
         const s = val.trim();
         return s == "" ? 0 : s.split(/\s+/).length;
       });
 
-    this.countWords = countWords;
-
+    // tick the timestamp every second
     const ticker = Observable.interval(1000 /* ms */).map(_ =>
       new moment().format("H:mm:ss A")
     );
+
     return { countWords, ticker };
   }
 };
