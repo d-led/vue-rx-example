@@ -3,7 +3,7 @@
     <b-form-group label="Background ticker">
       <b-form-input readonly type="text" v-model="ticker"></b-form-input>
     </b-form-group>
-    <b-form-group id="exampleInputGroup2" label="Word count">
+    <b-form-group label="Word count">
       <b-form-input readonly type="text" v-model="countWords"></b-form-input>
     </b-form-group>
     <b-form-group label="Enter some text">
