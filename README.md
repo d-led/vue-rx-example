@@ -2,6 +2,9 @@
 
 Continuation of the https://github.com/d-led/reactiveexamples repo in the browser
 
+Demo: https://ledentsov.de/static/vue-rx-example/
+
+
 ## Project setup
 ```
 npm install
